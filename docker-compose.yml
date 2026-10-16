@@ -1,0 +1,7 @@
+services:
+  tutor:
+    build: .
+    ports: ["8501:8501"]
+    restart: unless-stopped        # se levanta solo si el equipo se reinicia
+    volumes:
+      - ./datos_escuela:/datos     # aquí quedan la base de datos y los respaldos diarios
